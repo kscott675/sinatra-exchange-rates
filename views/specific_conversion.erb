@@ -1,5 +1,6 @@
 
 <h1>Convert <%= @from_currency %> to <%= @to_currency %></h1>
+<p> Go <a href="/<%= @from_currency %>">back</a>.</p>
 
   <% if @conversion_rate %>
     <p>1 <%= @from_currency %> equals <%= @conversion_rate %> <%= @to_currency %>.</p>

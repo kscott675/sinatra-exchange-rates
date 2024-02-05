@@ -18,14 +18,14 @@ get("/") do
 end
 
 # Define a route for individual currency conversion
-get("/convert/:from_currency") do
+get("/:from_currency") do
   @from_currency = params["from_currency"]
   @symbols = fetch_currency_list
   erb :convert_currency
 end
 
 # Define a route for specific currency pair conversion
-  get("/convert/:from_currency/:to_currency") do
+  get("/:from_currency/:to_currency") do
     @from_currency = params.fetch("from_currency")
     @to_currency = params.fetch("to_currency")
   
