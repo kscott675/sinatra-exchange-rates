@@ -1,0 +1,10 @@
+
+<h1>Convert <%= @from_currency %> to <%= @to_currency %></h1>
+
+  <% if @conversion_rate %>
+    <p>1 <%= @from_currency %> equals <%= @conversion_rate %> <%= @to_currency %>.</p>
+  <% else %>
+    <p>Unable to fetch conversion rate.</p>
+  <% end %>
+
+  <a href="/">Back to Homepage</a>
